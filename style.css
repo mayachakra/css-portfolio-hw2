@@ -1,0 +1,137 @@
+:root{
+    --dark: rgb(54, 67, 124);
+    --light:rgb(124, 155, 228);
+    --medium:rgb(72, 92, 147);
+    --lmedium:rgb(95, 115, 170);
+    --xlight:rgb(203, 217, 246);
+    --titlefont: arial; 
+    --mainfont: monospace;
+    --radius: 50px;
+  
+  }
+  
+  body {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--dark);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: var(--titlefont);
+    text-align: center;
+    color:var(--dark);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  a, h3{
+    font-family: var(--mainfont);
+    color:var(--dark);
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .contactme a:hover{
+    background-color: var(--xlight);
+    color: var(--lmedium);
+  }
+  .resume a:hover{
+    background-color: var(--xlight);
+    color: var(--lmedium);
+
+  }
+  
+  header {
+    padding: 40px;
+    text-align: center;
+    background: var(--xlight);
+    color: var(--xlight);
+    font-family: var(--mainfont);
+  
+  }
+  
+  nav {
+    display: flex;
+    background-color: var(--light);
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  nav a {
+    color: var(--dark);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--titlefont);
+  
+  }
+  
+  nav a:hover {
+    background-color: var(--xlight);;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(var(--xlight),var(--lmedium));
+  }
+  
+  footer {
+    width: auto;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    background: var(--medium);
+    color: var(--dark);
+    margin-top: auto;
+  }
+  
+  .placeholder {
+    flex: 1;
+    background: linear-gradient(var(--dark),var(--light));
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  @media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+  }
+  
+  .container{
+      margin-bottom: -5px;
+  }
+  .row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .col-1{
+    flex-basis: 50%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  .col-2{
+    flex-basis: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+  .col-0{
+    flex-basis: 35%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  .subtitle{
+    border-right: 2px solid var(--dark);
+  }
