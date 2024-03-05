@@ -1,9 +1,8 @@
 :root{
-    --dark: rgb(54, 67, 124);
-    --light:rgb(124, 155, 228);
-    --medium:rgb(72, 92, 147);
-    --lmedium:rgb(95, 115, 170);
-    --xlight:rgb(203, 217, 246);
+    --dark: rgb(6, 9, 25);
+    --medium:rgb(147, 72, 72);
+    --lmedium:rgb(170, 114, 95);
+    --xlight:rgb(228, 192, 120);
     --titlefont: arial; 
     --mainfont: monospace;
     --radius: 50px;
@@ -59,7 +58,7 @@
   
   nav {
     display: flex;
-    background-color: var(--light);
+    background-color: var(--medium);
     align-items: center;
     justify-content: flex-end;
   }
@@ -92,14 +91,13 @@
     color: var(--dark);
     margin-top: auto;
   }
-  
+ 
   .placeholder {
-    flex: 1;
-    background: linear-gradient(var(--dark),var(--light));
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    background-image: url(flowers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:300px;
   }
   
   @media screen and (max-width: 768px) {
@@ -134,4 +132,49 @@
   }
   .subtitle{
     border-right: 2px solid var(--dark);
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:10px;
+  }
+  .images{
+    width:100%;
+  }
+  #work h3{
+    position: absolute;
+    color:var(--dark);
+    background-color: var(--lmedium);
+    z-index: 1;
+  }
+  #work img:hover{
+    filter: brightness(125%);
+    box-shadow: 0 0 50px var(--dark);
+  }
+  #work .images{
+    width:100%
+  }
+  #work img{
+    width:100%;
+    height:auto;
+    transition: all 0.5s ease-in-out;
+  }
+  #work .images:first-child{
+    grid-column: 1 / span 2; /*will span one image across both columns*/
+  }
+  #work .images:nth-child(3),
+  #work .images:nth-child(4){
+    grid-column:span 1;
+  }
+  #work .images:nth-child(5),
+  #work .images:nth-child(6){
+    grid-column:span 1;
+    grid-row:span 2; /*goes up to 6 bc the first one takes up both columns*/
+  }
+  #work .images:nth-child(4){
+    margin-top: -200px;
+  }
+  a{
+    font-size: 24px;
   }
